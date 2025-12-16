@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   int n,i,j,d=1,count=0;
+   // finding the maximum and minimum of the array
+   printf("how long your array : ");
+   scanf("%d",&n);
+   int m[n];
+   // LOOP FOR TELLING THE NUMNBER SOF AN ARRAY
+   for(i=0;i<n;i++){
+      printf("the number for %d index is ",i);
+      scanf("%d",&m[i]);
+   }
+   // checking for prime number
+   // LOOP WORKING 
+   for(i=0;i<n;i++){
+      if(m[i]<2)
+         continue;
+         for(j=2;j<=m[i]/2;j++){
+            if(m[i]%j==0){
+               d=0;
+               break;
+            }
+      }
+      if(d==1)
+      count++;
+   }
+printf("%d is total prime numbers ",count);
+   return 0;
+}
