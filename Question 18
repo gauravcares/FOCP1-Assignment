@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   int n,i,j,d;
+   // IDENTIFYING THE DUPLICATES FROM AN ARAY
+   printf("how long your array : ");
+   scanf("%d",&n);
+   // DATA VALIDATION 
+   // APPORIATE ARRAY LIST IS MUST TO BE MADE
+   if(n<=1){
+      printf("NO DUPLICATES CAN BE FOUND ");
+      return 0;
+   }
+   int m[n];
+   // LOOP FOR TELLING THE NUMNBER OF AN ARRAY
+   for(i=0;i<n;i++){
+      printf("the number for %d index is ",i);
+      scanf("%d",&m[i]);
+   }
+   printf("DUPLICATE NUMBERS : ");
+   // CONDITION FOR FINDING THE DUPLICATES
+   for(i=0;i<n;i++){
+      d=1;
+      if(m[i]==-1){ // LOOPS WORKS AFTER END TO INNER FOR LOOP 5
+         continue;
+      }
+      for(j=i+1;j<n;j++){ // --------5
+         if(m[i]==m[j]){
+            d++;
+            m[j]=-1; // DENOTING OTHER REPATORS AS -1 SO NOT STUCK IN CODE
+      }
+      }
+      if(d>1) // ONLY FOR DUPLICATES
+         printf("%d ",m[i]);
+      
+   }
+   if(d==0)
+      printf("NOPE");
+   return 0;
+}
