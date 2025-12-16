@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int n,ogn,i=0,sum=0,rem;
+    // obtaining anumber to check for a armstrong number
+    printf("enter a number : ");
+    scanf("%d",&n);
+    // giving the value for n in orn to further analysis
+    ogn=n;
+    // now we will calculate for the number of digits n have
+    while(n>0){
+        n/=10;
+        ++i;
+    }
+    // now we calculte for the power and their sumation 
+       n=ogn;
+    while(n>0){
+        rem=n%10;
+        sum+=pow(rem,i);
+        n/=10;
+        // here i will define the number of digits we have and power of them
+    }
+    // checking for the armstrong number finally
+    sum==ogn ? printf("Yes %d is a armstrong number",ogn) : printf("no %d is not a armstrong number",ogn) ;
+    return 0;  
+}
