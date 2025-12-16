@@ -1,0 +1,23 @@
+#include <stdio.h>
+// USE OF FUNCTIONS 
+int sub(int a, int b){
+   while(b!=0){
+      // BOORORW POSITON 
+      int borrow= (~a)&b;
+      a=a^b;
+      // GIVING BOOROW TO RIGHT POSITION 
+
+      b=borrow<<1;
+      return a;
+   }
+}
+int main(){
+   int n1,n2;
+   printf("enter the first number : ");
+   scanf("%d",&n1);
+   printf("enter the second number : ");
+   scanf("%d",&n2);
+   int result = sub(n1,n2);
+   printf("When %d is substracted from %d the result is %d ",n2,n1,result);
+   return 0;
+}
