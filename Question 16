@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   int n,i,j,d,d1;
+   // INSERTING AN ARRAY AT ANY POSITION IN ARRAY
+   printf("how long your array : ");
+   scanf("%d",&n);
+   int m[n];
+   // LOOP FOR TELLING THE NUMNBER OF AN ARRAY
+   for(i=0;i<n;i++){
+      printf("the number for %d index is ",i);
+      scanf("%d",&m[i]);
+   }
+   // AKSING WHICH NUMBER YOU WANT TO REPLACE 
+   printf("\nTELL THE INDEX YOU WANT TO REPLACE WITH A NEW ARRAY : ");
+   scanf("%d",&d);
+   printf("NEW NUMBER TO INSERT : ");
+   scanf("%d",&d1);
+   // AND STORING IT IN ANOTHER ARRAY FOLLOWED BY THE PATTERN
+   for(i=n;i>=d;i--){ // SHIFTING THEM TO 1 POSITION ON RIGHT
+      m[i]=m[i-1];
+   }
+   m[d]=d1;
+   for(i=0;i<n;i++){
+      printf("%d ",m[i]);
+   }
+   return 0;
+}
