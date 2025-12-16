@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+   // printing the HCF of 2 numbers
+   int n,m,hcf;
+   printf("enter a number ");
+   scanf("%d",&n);
+   printf("enter a number ");
+   scanf("%d",&m);
+   // here we going to find the HCF of two numbers
+   for(int i=1;(i<=n && i<=m);i++){
+      if(n%i==0 && m%i==0){
+         hcf=i;
+         // it contains multiple of n corresponding number
+         // for better understanding 
+         // use this : printf("HCF of %d and %d is : %d",n,m,hcf);
+      }
+   }
+   printf("HCF of %d and %d is : %d",n,m,hcf);
+   return 0;
+}
