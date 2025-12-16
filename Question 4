@@ -1,0 +1,65 @@
+#include <stdio.h>
+int main(){
+      // swapping two numbers using four differnt method 
+   int a,s;
+   printf("METHOD 1\n");
+   // METHOD 1 : 
+   // USING A TEMPORARY VARIABLE 
+    printf("enter the first number : ");
+   scanf("%d",&a);
+   printf("enter the second number : ");
+   scanf("%d",&s);
+   int tempvar;
+   tempvar=a;
+   a=s;
+   s=tempvar;
+   // after swapping the numbers 
+   printf("the first number after swapping variables is %d \n",a);
+    printf("the second number after swapping variables is %d \n",s);
+
+    // METHOD 2
+    // USING ARITHMETIC METHOD 
+     printf("METHOD 2\n");
+      printf("enter the first number : ");
+   scanf("%d",&a);
+   printf("enter the second number : ");
+   scanf("%d",&s);
+   a=a+s;
+   s=a-s;
+   a=a-s;
+   // after swapping the numbers 
+   printf("the first number after swapping variables is %d \n",a);
+    printf("the second number after swapping variables is %d \n",s);
+
+    // METHOD 3
+    // USING BITWISE OPERAOTR
+    printf("METHOD 3\n");
+    printf("enter the first number : ");
+   scanf("%d",&a);
+   printf("enter the second number : ");
+   scanf("%d",&s);
+   a=a^s;
+   s=a^s;
+   a=a^s;
+   // after swapping the numbers 
+   printf("the first number after swapping variables is %d \n",a);
+    printf("the second number after swapping variables is %d \n",s);
+
+    // METHOD 4
+    // POINTER MANUPLUATION 
+    printf("METHOD 4\n");
+    printf("enter the first number : ");
+   scanf("%d",&a);
+   printf("enter the second number : ");
+   scanf("%d",&s);
+   int *p=&a;
+   int *r=&s;
+   int t=*p;
+   *p=*r;
+   *r=t;
+   // after swapping 
+   printf("the first variable after swapping is %d\n",*p);
+printf("the second  variable after swapping is %d\n",*r);
+
+   return 0;
+}
