@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   // converting b/w binary and decimal system
+   int v,count=0,rem,sum=0,c,ord;
+   printf("pls enter the number 1 and 0 only in binary order\n");
+   printf("enter a binary number ");
+   scanf("%d",&v);
+   ord=v;
+   // calculating the number of digits our number has
+   while(v>0){
+      v/=10;
+      count++;
+   }
+   c=count++;
+   v=ord;
+   printf("the total number of digits we have %d\n",c);
+   for(int i=0;i<c;i++){
+      rem=v%10;
+      v/=10;
+      int a=pow(2,i);
+      int mul=rem*a;
+      sum= sum+mul;
+   }
+   printf("the Decimal number of %d is %d",ord,sum);
+   return 0;
+}
