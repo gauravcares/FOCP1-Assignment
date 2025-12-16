@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   int n,i,j,d;
+   // finding the maximum and minimum of the array
+   printf("how long your array : ");
+   scanf("%d",&n);
+   int m[n];
+   // LOOP FOR TELLING THE NUMNBER SOF AN ARRAY
+   for(i=0;i<n;i++){
+      printf("the number for %d index is ",i);
+      scanf("%d",&m[i]);
+      d=m[n-1];
+   }
+   // ROTATING THE ARRAY CLOCKWISE BY ONE POSITION
+   for(i=n-1;i>0;i--){ // SHIFTING THEM TO 1 POSITION ON RIGHT
+      m[i]=m[i-1];
+   }
+   m[0]=d;
+   for(i=0;i<n;i++){
+      printf("%d ",m[i]);
+   }
+   return 0;
+}
