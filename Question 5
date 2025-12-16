@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main(){
+   // finding the coordinates plane for the given point 
+   int a,b;
+   printf("Enter the X coordinate ");
+   scanf("%d",&a);
+   printf("Enter the Y coordinate ");
+   scanf("%d",&b);
+   printf("POINT : (%d,%d)\n",a,b); // final coordinate of the plane 
+   // geometrical conditions
+   if(a>0){
+      if(b>0)
+      printf("I QUADRANT");
+      if(b<0)
+      printf("IV QUADRANT");
+      else
+     printf("X Axis");
+   }
+  else if(a<0){
+      if(b>0)
+      printf("II QUADRANT");
+      if(b<0)
+     printf("III QUADRANT");
+     else
+     printf("X Axis");
+   }
+  else if(a==0 && b==0){
+      printf("ORIGIN");
+   }
+   else if(a==0){
+      printf("Y Axis");
+   }
+   return 0;
+}
