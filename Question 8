@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+   // generation of Fabonaacii series 
+   // the numbers the sum of 2 preceding numbers
+   int n,firstnum=0,secondnum=1,nextnum;
+   printf("Enter how long you want to go for series ");
+   scanf("%d",&n);
+   for(int i=1;i<=n;i++){
+    printf("%d, ",firstnum);
+    nextnum=firstnum+secondnum;
+    firstnum=secondnum;
+    secondnum=nextnum;
+    
+   }
+   return 0;
+}
