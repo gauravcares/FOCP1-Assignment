@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+   // describing the  occurance / repeatition  of the numbers from the given data sets
+   // and finally calculating total among them
+    printf("printing the array and finding the number 99 occurance from it ");
+    int a,firnum=0;
+    printf("\nenter the number of elements you want to enter in an array \n");
+    scanf("%d",&a);
+   int n[a];
+   for(int i=0;i<a;i++){
+      printf("enter the %dth index number ",i);
+      scanf("%d",&n[i]);
+      if(n[i]==99)
+      firnum+=1;
+      continue;
+   }
+   printf("the first occurance of number 99 is at index %d",firnum);
+   return 0;
+}
